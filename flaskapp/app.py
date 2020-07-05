@@ -8,6 +8,11 @@ import pandas as pd
 import numpy as np
 import json
 
+
+pickle_in =  open('iris_rf_model','rb')
+rf = pickle.load(pickle_in)
+pickle_in.close()
+
 app = Flask(__name__)
 
 @app.route("/")
@@ -32,9 +37,6 @@ def predict():
     return render_template("home.html",result=labelFlower.get(pred,'Unidentified'))
 
 if __name__ == "__main__":
-    pickle_in =  open('iris_rf_model','rb')
-    rf = pickle.load(pickle_in)
-    pickle_in.close()
     app.run(debug=False,port=5000)
 
 
