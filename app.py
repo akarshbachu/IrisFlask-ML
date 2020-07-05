@@ -37,6 +37,6 @@ def predict():
     return render_template("index.html",result=labelFlower.get(pred,'Unidentified'))
 
 if __name__ == "__main__":
-    app.run(debug=False)
+    app.run(debug=True)
 
 
