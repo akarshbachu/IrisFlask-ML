@@ -1,2 +1,4 @@
 # IrisFlask-ML
-Basic IRIS Flower Classification - To Demo FLASK
+Basic IRIS Flower Classification - FLASK
+
+<img src='Result.png'/>

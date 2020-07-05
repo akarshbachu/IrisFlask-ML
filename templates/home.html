@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Iris</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+
+  </head>
+
+  <!-- https://mdbootstrap.com/img/Photos/Others/images/91.jpg -->
+  <body data-spy="scroll" data-target=".navbar" data-offset="50" style="background-image: url('https://mdbootstrap.com/img/Photos/Others/images/91.jpg'); background-repeat: no-repeat; background-size: cover; background-position: center center;">
+    
+    <section id="header">
+      <div class="container ">
+          <div class="row ">
+            <div class="col-2"></div>
+                <div class="col-8">
+                    <div class="h1 text-center">Iris Flower Classification - FLASK</div>
+                    <hr />
+                </div>
+                <div class="col-2"></div>
+          </div>
+      </div>
+    </section>
+    <!-- <center> -->
+    <section id="body">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-sm-12 pb-3 offset-md-4">
+            <div class="card h-95 " style="background-color: rgba(126, 123, 215, 0.2);">
+              <div class="card-body" style="background-color: rgba(126, 123, 215, 0.2);">
+                  <h4 class="card-title text-center">Iris Flower Prediction</h4>
+                  <p class="card-text">
+                      Enter below 4 values to get type of the flower.
+                  </p>
+
+              </div>
+              <form action="{{ url_for('predict')}}" method='post' class="main-form needs-validation " novalidate >  
+                <center>
+                  <div class="form-group">
+                    <!-- <label for="SepalLength">SepalLength</label> -->
+                    <input placeholder='SepalLength' type="text" name="SepalLength" id="SepalLength" class="form-control col-md-8 col-sm-10 pb-2 " required>
+                    <div class="invalid-tooltip">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input placeholder='SepalWidth' type="text" name="SepalWidth" id="SepalWidth" class="form-control col-md-8 col-sm-10 pb-2" required>
+                  
+                    <div class="invalid-tooltip">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input placeholder='PetalLength' type="text" name="PetalLength" id="PetalLength" class="form-control col-md-8 col-sm-10 pb-2" required>
+                    <div class="invalid-tooltip">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <input placeholder='PetalWidth' type="text" name="PetalWidth" id="PetalWidth" class="form-control col-md-8 col-sm-10 pb-2" required>
+                    <div class="invalid-tooltip">
+                      Please provide a valid city.
+                    </div>
+                  </div>
+                  <div class="card-footer">
+                    <center><button type="submit" class="btn btn-primary" style="background-color: rgba(126, 123, 215, 0.2);" >Submit</button></center>
+                  </div>
+                </center>
+              </form>
+            </div>
+            <div class="alert alert-dark" style="background-color: rgba(126, 123, 215, 0.2);" role="alert">
+              <b>Result: {{result}}
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- </center> -->
+     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+
+  </body>  
+</html>
