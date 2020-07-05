@@ -35,6 +35,6 @@ if __name__ == "__main__":
     pickle_in =  open('iris_rf_model','rb')
     rf = pickle.load(pickle_in)
     pickle_in.close()
-    app.run(debug=True)
+    app.run(debug=False,port=5000)
 
 
