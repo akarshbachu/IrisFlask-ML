@@ -15,7 +15,7 @@ pickle_in.close()
 
 app = Flask(__name__)
 
-@app.route("/")
+@app.route("/",methods=['GET'])
 def home():
     return render_template("home.html")
 
