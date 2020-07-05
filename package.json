@@ -1,0 +1,19 @@
+{
+  "name": "irisflask-ml",
+  "version": "1.0.0",
+  "description": "Basic IRIS Flower Classification - FLASK",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/akarshbachu/IrisFlask-ML.git"
+  },
+  "author": "akarsh",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/akarshbachu/IrisFlask-ML/issues"
+  },
+  "homepage": "https://github.com/akarshbachu/IrisFlask-ML#readme"
+}

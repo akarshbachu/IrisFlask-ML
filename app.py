@@ -17,7 +17,7 @@ app = Flask(__name__)
 
 @app.route("/",methods=['GET'])
 def home():
-    return render_template("home.html")
+    return render_template("index.html")
 
 @app.route("/predict",methods=['POST'])
 def predict():
@@ -34,7 +34,7 @@ def predict():
     labelFlower = {0:'Setosa', 1:'Virginica', 2:'VersiColor'}
     pred = rf.predict(np.array([sepallength,sepalwidth,petallength,petalwidth]).reshape(1,-1))[0]
     
-    return render_template("home.html",result=labelFlower.get(pred,'Unidentified'))
+    return render_template("index.html",result=labelFlower.get(pred,'Unidentified'))
 
 if __name__ == "__main__":
     app.run(debug=False)
